@@ -9,12 +9,13 @@ for guessTaken in range(1, 7):
     print("Take a guess!")
     playerGuess = int(input())
 
+    if playerGuess > 20:
+        print("You guessed a number above 20. Please choose another number.")
+        continue
     if playerGuess < secretNumber:
         print("Your guess is too low.")
-
     elif playerGuess > secretNumber:
         print("Your guess was too high.")
-
     else:
         break
 
